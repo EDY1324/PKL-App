@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>Pilih Tempat PKL</h2>
+  <div class="card-container">
+    <div class="card" *ngFor="let tempat of tempatPKL" (click)="pilihTempat(tempat)">
+      <h3>{{ tempat.name }}</h3>
+      <p>{{ tempat.address }}</p>
+    </div>
+  </div>
+</div>

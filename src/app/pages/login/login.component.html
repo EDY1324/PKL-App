@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="form-section">
+      <h1>LOGIN</h1>  
+      <p>Masukkan akun Anda dengan benar</p>
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <input type="text" formControlName="username" placeholder="Email address" required>
+          <input type="password" formControlName="password" placeholder="Password" required>
+          <div class="checkbox-container">
+              <input type="checkbox" id="remember">
+              <label for="remember">Remember Me</label>
+          </div>
+          <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+          <button type="submit">Login</button>
+      </form>
+      <p>Don't have an account? <a href="#">Sign up</a></p>
+  </div>
+  <div class="illustration-section">
+      <img src="bunga.jpg" height="500" alt="Gambar Ilustrasi">
+  </div>
+</div>

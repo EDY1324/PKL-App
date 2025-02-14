@@ -1,0 +1,16 @@
+<div class="info-container">
+  <div class="info-card">
+    <h2>{{ tempat?.name }}</h2>
+    <p>{{ tempat?.description }}</p>
+
+    <h3>Daftar Anak Magang:</h3>
+    <ul>
+      <li *ngFor="let student of students">
+        <strong>{{ student.name }}</strong> <br>
+        <small>{{ student.contact }}</small>
+      </li>
+    </ul>
+
+    <button class="pilih-btn" (click)="pilihTempat()">Saya memilih tempat ini</button>
+  </div>
+</div>
