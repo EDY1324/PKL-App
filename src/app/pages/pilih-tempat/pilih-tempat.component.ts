@@ -37,11 +37,9 @@ constructor(private http: HttpClient, private router: Router) {}
 
   pilihTempat(tempat: any) {
     if (this.selectedTempat && this.selectedTempat.id === tempat.id) {
-      alert('Tempat sudah dipilih!');
       return;
     }
   
-    console.log('Tempat yang dipilih:', tempat);
     this.selectedTempat = tempat;
   
     this.http.post('http://localhost:3000/places', 

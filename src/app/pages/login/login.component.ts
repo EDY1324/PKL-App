@@ -29,9 +29,7 @@ export class LoginComponent {
           console.log('Response dari server:', response);
           if (response.message === 'Login berhasil') {
             sessionStorage.setItem('user', JSON.stringify(response.user));
-            console.log('Sebelum navigasi ke /pilih-tempat');
             this.router.navigate(['/pilih-tempat']).then(success => {
-              console.log('Navigasi sukses:', success);
             });
           }
         },
