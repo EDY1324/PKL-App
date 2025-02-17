@@ -3,7 +3,7 @@
       <h1>LOGIN</h1>  
       <p>Masukkan akun Anda dengan benar</p>
       <form [formGroup]="loginForm" (ngSubmit)="login()">
-          <input type="text" formControlName="username" placeholder="Email address" required>
+          <input type="text" formControlName="username" placeholder="Email address/username" required>
           <input type="password" formControlName="password" placeholder="Password" required>
           <div class="checkbox-container">
               <input type="checkbox" id="remember">
